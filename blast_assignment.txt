@@ -1,0 +1,73 @@
+#!/bin/bash
+
+
+cd /home/slampman/Desktop
+
+
+##1: Write a command that makes a blast database for the database_mystery_transcripts.fasta file.
+
+makeblastdb -in database_mystery_transcripts.fasta -dbtype nucl -out nuc_database
+
+
+##2: Write a command that makes a blast database for the database_mystery_proteins.fasta file
+
+makeblastdb -in database_mystery_proteins.fasta -dbtype prot -out prot_database
+
+
+##3: Write a command that searches the mystery nucleotide query against the mystery
+#transcripts database and: a.) keeps sequences with an e-value of 1e-3 or less, b.) keeps up to
+#5 hits, and c.) outputs the file to tabular format with comment lines.
+
+blastn -db nuc_database -query query_mystery_nucleotide.fasta -outfmt 7 -evalue 1e-3 -out nuc_blast_results.txt -max_target_seqs 5
+
+ 	## -evalue sets evalue maximum, -max_target_seqs specifiies number of hits. -outfmt <string> is output format; 7 means tabular w/ comment lines
+
+
+##4: What is/are the IDs/sequence names of most similar hit(s) from the above search (based on sequence identity)?
+
+# T010027234997	91.965
+# T010003453160	91.351
+# T010027234995	91.351
+
+
+##5:  Using awk and/or grep, write a command that prints the sequence names with an identity
+#over 90% from the above search to a new file called most_similar.txt.
+
+grep -v "#" nuc_blast_results.txt | awk '$3 >90 {print $2}' >> most_similar.txt
+
+	## -v "#" will get rid of anything that is commented out (so, the headers). grep must go first
+	## so awk will be able to find the correct columns
+
+
+##6:  Write a command that searches the mystery protein query against the mystery protein database
+#and: a.) keeps sequences with an e-value of 1e-5 or less, b.) keeps up to 15 hits, and c.) outputs
+#the file to tabular format with comment lines.
+
+blastp -db prot_database -query query_mystery_protein.fasta -outfmt 7 -evalue 1e-5 -out prot_blast_results.txt -max_target_seqs 15
+
+
+##7: What is/are the IDs/sequence names of the best hit(s) from the above search (based on e-value)?
+
+#P010027090796
+#P010027090798
+#P010027073865
+#P010027077695
+#P010027071558
+#P010027071553
+
+
+##8: What is the species of the mystery_transcripts database fasta file (use the online NCBI database)?
+
+#Coffea arabica
+
+	##need to go into the nucleotide database and copy/paste a specific sequence into NCBI, whole file is too big
+
+
+##9: What is the species of the mystery query (use the online NCBI database)?
+
+#Gardenia jasminoides
+
+
+##10:  What is the gene of the mystery query (use the online NCBI database)?
+
+#putative catalase
