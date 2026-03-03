@@ -1,0 +1,25 @@
+##3 Using CIPRES what would the command line text of the above commands be if we were to run this in a terminal? ##from _JOBINFO.TXT file
+
+Task\ label=bat_tree_newick
+Task\ ID=3308770
+Tool=RAXMLHPC8_XSEDE
+created\ on=2026-02-24 11:55:24.0
+JobHandle=NGBW-JOB-RAXMLHPC8_XSEDE-A0CEF63AD7F441059DEC7F9476DF39B3
+RunNumber=1
+resource=expanse
+User\ ID=178481
+User\ Name=man_of_lamps
+email=samantha.lampman@wmich.edu
+Output=(all_outputfiles,*,UNKNOWN,UNKNOWN,UNKNOWN)
+ChargeFactor=1.000000
+cores=40
+JOBID=46732586
+
+##4 Sequences from which species is/are most closely related to that of the "Flying Fox"? ##go to tree viewer (https://etetoolkit.org/treeview/) and copy/paste newick output from RAxML_bestTree file
+
+Flying fox = Pteropus genus
+Species that are closely related to Pteropus lylei are: Syconycteris australis, Dobsonia viridis, Cynopterus sphinx, Rousettus leschenaultii, and Epomophorous wahlbergi. These species make up the sister group to Pteropus lylei.
+
+##5 Why might such a phylogeny be useful in light of recent events?
+
+Covid-19 is believed to have merged from bats. This phylogeny might be useful with comparing what bat species can be infected, and humans, because it may indicate some conserved or similar elements that humans share with bats that make us susceptible to the virus, without the virus having to change too much. Such kinds of elements could be immune system-related.
