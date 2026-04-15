@@ -1,0 +1,6 @@
+7. Upload this screenshot to your GitHub with a brief description of what the figure is illustrating.
+Make sure to give a biological interpretation of all data types!
+
+This image shows the areas of the the Rio pearlfish genome that have open chromatin, the strength of the expression, and where the topological associated domains are located. The RNA data in red is showing where there is a signal for RNA being transcribed. The ATAC data in blue indicates regions that have open chromatin and therefore accessible. For both diapause and larvae samples, there is ATAC data for both coding and non-coding regions (I was unable to extend the bar that shows the labels). The files are this order: below the average ATAC data is the coding ATAC data, and below that will be the non-coding ATAC data. The RNA signals can be found in alignment with some of the ATAC peaks, indicating higher expression in this areas of open chromatin.
+The purple loops show where the TADs are. The areas of the genome within these TADs interact with each other to control gene regulation.
+The green data on the bottom is the genome's annotation. This helps show you what particular exons you are looking at, so you can connect them to expression levels, open chromatin regions, and TADs.
