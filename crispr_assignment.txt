@@ -1,0 +1,25 @@
+1.) Species (not human)
+
+Felis catus
+
+2.) Gene (not tyrosinase)
+
+Orange (ARHGAP36)
+
+3.) Rank 1 target sequence and genomic location
+
+GGATTCTTCAATCTGCATCGCGG
+Location: X:110474873
+
+4.) One primer pair that you can use to check the crispant genotypes. Report sequence and coordinates for left and right primers
+
+Left:
+	CGTGTCTCATTCTTTCTCTCCC
+	X:110474756-110474778
+Right:
+	GCTTGGAGGGTTCAACTCACT
+	X:110475024-110475045
+
+5.) If you knock out this gene, what is your expected phenotype?
+
+If you knocked out the Orange gene, the cat could not have an orange coat, even if both parents were orange--orange females would be OO while males would be O, since it is sex-linked. Possessing the O allele(s) lead to the production of phaeomelanin, giving a red color instead of brown. The cat's coat would be governed by other genes and, depending on what other alleles are possessed, the cat could be brown, white, black, and some other color variants in between as well as some other patterns. The individual just could not be a true orange without producing phaeomelanin.
